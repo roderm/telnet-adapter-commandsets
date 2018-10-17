@@ -39,9 +39,9 @@
             "maximum": 160,
             "get": "?V",
             "set": "###VL",
-            "up":"VU",
-            "down":"VD",
-            "response":"VOL###",
+            "up": "VU",
+            "down": "VD",
+            "response": "VOL###",
             "datatype": "int",
             "pullcycle": "120"
         }
@@ -56,7 +56,7 @@
             "datatype": "pioneer_state",
             "set": "ZE#",
             "response": "ZEP#",
-            "pullcycle": "1800", 
+            "pullcycle": "1800",
             "toggle": "ZZ"
         }
     },
@@ -86,13 +86,14 @@
             "set": "##HZV",
             "minimum": 0,
             "maximum": 80,
-            "up":"HZU",
-            "down":"HZD",
+            "up": "HZU",
+            "down": "HZD",
             "datatype": "int",
             "response": "XV##",
             "pullcycle": "120"
         }
-    },{
+    },
+    {
         "label": "Bass",
         "type": "number",
         "@type": "LevelProperty",
@@ -111,24 +112,126 @@
             "maximum": "6",
             "minimum": "0"
         }
-        },{
-            "label": "Treble",
-            "type": "number",
-            "@type": "LevelProperty",
-            "unit": "percent",
-            "description": "Set main-zone Volume",
-            "minimum": 0,
-            "maximum": 100,
-            "commands": {
-                "set": "##TR",
-                "get": "?TR",
-                "response": "TR##",
-                "up": "TI",
-                "down": "TD",
-                "datatype": "percentage",
-                "pullcycle": "120",
-                "maximum": "6",
-                "minimum": "0"
-            }
+    },
+    {
+        "label": "Treble",
+        "type": "number",
+        "@type": "LevelProperty",
+        "unit": "percent",
+        "description": "Set main-zone Volume",
+        "minimum": 0,
+        "maximum": 100,
+        "commands": {
+            "set": "##TR",
+            "get": "?TR",
+            "response": "TR##",
+            "up": "TI",
+            "down": "TD",
+            "datatype": "percentage",
+            "pullcycle": "120",
+            "maximum": "6",
+            "minimum": "0"
+        }
+    },
+    {
+        "label": "Input Main",
+        "type": "string",
+        "description": "Set Input Main",
+        "commands": {
+            "get": "?F",
+            "set": "##FN",
+            "up": "FU",
+            "down": "FD",
+            "response": "FN##",
+            "datatype": "keyvalue_list",
+            "list": [
+                {
+                    "key": "19",
+                    "value": "HDMI-1"
+                },
+                {
+                    "key": "20",
+                    "value": "HDMI-2"
+                },
+                {
+                    "key": "21",
+                    "value": "HDMI-3"
+                },
+                {
+                    "key": "22",
+                    "value": "HDMI-4"
+                },
+                {
+                    "key": "23",
+                    "value": "HDMI-5"
+                },
+                {
+                    "key": "24",
+                    "value": "HDMI-6"
+                },
+                {
+                    "key": "25",
+                    "value": "BD"
+                }
+            ]
+        }
+    },
+    {
+        "label": "Input HD Zone",
+        "type": "string",
+        "description": "Set Input HD Zone",
+        "commands": {
+            "get": "?ZEA",
+            "set": "##ZEA",
+            "response": "ZEA##",
+            "datatype": "keyvalue_list",
+            "list": [
+                {
+                    "key": "19",
+                    "value": "HDMI-1"
+                },
+                {
+                    "key": "20",
+                    "value": "HDMI-2"
+                },
+                {
+                    "key": "21",
+                    "value": "HDMI-3"
+                },
+                {
+                    "key": "22",
+                    "value": "HDMI-4"
+                },
+                {
+                    "key": "23",
+                    "value": "HDMI-5"
+                },
+                {
+                    "key": "24",
+                    "value": "HDMI-6"
+                },
+                {
+                    "key": "25",
+                    "value": "BD"
+                }
+            ]
+        }
+    },
+    {
+        "label": "Listening mod",
+        "type": "string",
+        "description": "Listening mode Main",
+        "commands": {
+            "get": "?S",
+            "set": "####SR",
+            "response": "SR####",
+            "datatype": "keyvalue_list",
+            "list": [
+                {
+                    "key": "0041",
+                    "value": "Extended Stereo"
+                }
+            ]
+        }
     }
 ]
