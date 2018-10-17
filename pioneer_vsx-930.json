@@ -1,0 +1,134 @@
+[
+    {
+        "label": "Power Main",
+        "type": "boolean",
+        "@type": "OnOffProperty",
+        "description": "Set main-zone Power ",
+        "commands": {
+            "get": "?P",
+            "set": "P#",
+            "response": "PWR#",
+            "datatype": "pioneer_state",
+            "pullcycle": "1800",
+            "toggle": "PZ"
+        }
+    },
+    {
+        "label": "Mute Main",
+        "type": "boolean",
+        "@type": "OnOffProperty",
+        "description": "Set main-zone Power ",
+        "commands": {
+            "get": "?M",
+            "set": "M#",
+            "response": "MUT#",
+            "datatype": "pioneer_mute",
+            "pullcycle": "120"
+        }
+    },
+    {
+        "label": "Volume Main",
+        "type": "number",
+        "@type": "LevelProperty",
+        "unit": "percent",
+        "description": "Set main-zone Volume",
+        "minimum": 0,
+        "maximum": 100,
+        "commands": {
+            "minimum": 0,
+            "maximum": 160,
+            "get": "?V",
+            "set": "###VL",
+            "up":"VU",
+            "down":"VD",
+            "response":"VOL###",
+            "datatype": "int",
+            "pullcycle": "120"
+        }
+    },
+    {
+        "label": "Power HD-Zone",
+        "type": "boolean",
+        "@type": "OnOffProperty",
+        "description": "Set main-zone Power ",
+        "commands": {
+            "get": "?ZEP",
+            "datatype": "pioneer_state",
+            "set": "ZE#",
+            "response": "ZEP#",
+            "pullcycle": "1800", 
+            "toggle": "ZZ"
+        }
+    },
+    {
+        "label": "Mute HD-Zone",
+        "type": "boolean",
+        "@type": "OnOffProperty",
+        "description": "Set main-zone Power ",
+        "commands": {
+            "get": "?HZM",
+            "set": "HZM#",
+            "datatype": "pioneer_mute",
+            "response": "HZMUT#",
+            "pullcycle": "120"
+        }
+    },
+    {
+        "label": "Volume HD-Zone",
+        "type": "number",
+        "@type": "LevelProperty",
+        "unit": "percent",
+        "description": "Set main-zone Volume",
+        "minimum": 0,
+        "maximum": 100,
+        "commands": {
+            "get": "?HZV",
+            "set": "##HZV",
+            "minimum": 0,
+            "maximum": 80,
+            "up":"HZU",
+            "down":"HZD",
+            "datatype": "int",
+            "response": "XV##",
+            "pullcycle": "120"
+        }
+    },{
+        "label": "Bass",
+        "type": "number",
+        "@type": "LevelProperty",
+        "unit": "percent",
+        "description": "Set main-zone Volume",
+        "minimum": 0,
+        "maximum": 100,
+        "commands": {
+            "set": "##BA",
+            "get": "?BA",
+            "response": "BA##",
+            "up": "BI",
+            "down": "BD",
+            "datatype": "percentage",
+            "pullcycle": "120",
+            "maximum": "6",
+            "minimum": "0"
+        }
+        },{
+            "label": "Treble",
+            "type": "number",
+            "@type": "LevelProperty",
+            "unit": "percent",
+            "description": "Set main-zone Volume",
+            "minimum": 0,
+            "maximum": 100,
+            "commands": {
+                "set": "##TR",
+                "get": "?TR",
+                "response": "TR##",
+                "up": "TI",
+                "down": "TD",
+                "datatype": "percentage",
+                "pullcycle": "120",
+                "maximum": "6",
+                "minimum": "0"
+            }
+    }
+]
